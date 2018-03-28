@@ -1,0 +1,19 @@
+	# java
+*.class
+
+	#c++
+*.d
+*.slo
+*.lo
+*.o
+*.obj
+*.lai
+*.la
+*.a
+*.lib
+*.exe
+*.out
+*.bin
+*.dat
+*.txt
+*.so
