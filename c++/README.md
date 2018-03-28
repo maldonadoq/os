@@ -10,13 +10,14 @@ C++ OS
 ## Library ##
 
 ### Static Library ###
-  Generate.
+  - Generate
     * g++ -std=c++11 -c file1.cpp
     * g++ -std=c++11 -c file2.cpp
     * ar rsv mylib.a file1.o file2.o
     * g++ -std=c++11 -o main main.cpp mylib.a
+
 ### Dynamic Library ###
-  Generate.
+  - Generate
     * g++ -std=c++11 -fPIC -c file1.cpp
     * g++ -std=c++11 -fPIC -c file2.cpp
     * g++ -std=c++11 -shared -o mylib.so file1.o file2.o
