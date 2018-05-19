@@ -78,7 +78,25 @@ void write_data(){
 			    *sm++ = num;
 			    sm = NULL;
 			}
-			else cout << "-";
+			else{
+				cout << "-";
+				if (mq_receive (qd_server, in_buffer, MSG_BUFFER_SIZE, NULL) == -1) {
+			        perror ("server: mq_receive");
+			        exit (1);
+			    }
+
+				if ((qd_client = mq_open (in_buffer, O_WRONLY)) == 1) {
+			        perror ("server: not able to open client queue");
+			        continue;
+			    }
+
+			    sprintf (out_buffer, "%d", num);
+
+			    if (mq_send(qd_client, out_buffer, strlen(out_buffer), 0) == -1) {
+			        perror ("server: not able to send message to client");
+			        continue;
+			    }
+			}
 		}
 	}	
 }

@@ -40,7 +40,7 @@ int main(int argc, char **argv){
         }
 
         // display token received from server
-        printf ("%s\n", in_buffer);
+        printf ("%s ", in_buffer);
     }
 
 

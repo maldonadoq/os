@@ -37,7 +37,7 @@ int main(int argc, char const *argv[]){
 
 	nsr = 0;
 	signal(SIGUSR1, sighandler);
-	while(true){};
+	while(true and nsr<ns){};
 	cout << endl;
 	
 	unlink(FIFO_NAME);

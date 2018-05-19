@@ -28,7 +28,7 @@ using namespace std;
 //shm
 #define SHMSZ     27
 
-static int ns = 1000;		//number signals
+static int ns = 10000;		//number signals
 
 static mutex mtx;
 static condition_variable cv;

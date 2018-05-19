@@ -20,7 +20,7 @@ int main(int argc, char const *argv[]){
 
 	kill(PID,SIGUSR1);
 	signal(SIGUSR2, sighandler);	
-	while(true){};
+	while(true and nss>0){};
 	cout << endl;
 
 	return 0;
